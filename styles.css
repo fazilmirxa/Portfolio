@@ -4,11 +4,12 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: poppins;
+    user-select: none;
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     display: none;
-}
+} */
 #wrapper{
     font-family: poppins;
     height: 100vh;
@@ -46,8 +47,6 @@
     font-size: 18px;
     font-weight: 400;
     gap: 3rem;
-    
-    
 }
 .hover a{
     height: 40px;
@@ -59,8 +58,6 @@
 }
 .hover a:hover{
     color: white;
-    
-    
 }
 .hover a::before{
     content: "";
@@ -71,13 +68,10 @@
     background: rgb(0, 0, 0);
     border-right: 5px dashed rgb(255, 255, 255);
     transition: 0.4s all;
-    z-index: -1;
-    
+    z-index: -1;   
 }
 .hover a:hover::before{
-    
     transform: scaleX(1);
-
 }
 .nav-items div a{
     padding: 20px 20px;
@@ -97,16 +91,16 @@
 }
 .faded-text{
     position: absolute;
- user-select: none;
- font-size: 4rem;
- color: rgb(231, 231, 231);
- bottom: -10%;
- left: -5%;
- font-weight: 400;
+    user-select: none;
+    font-size: 4rem;
+    color: rgb(231, 231, 231);
+    bottom: -10%;
+    left: -5%;
+    font-weight: 400;
 }
 .faded-text2{
     position: absolute;
- user-select: none;
+    user-select: none;
  font-size: 7rem;
  color: rgb(231, 231, 231);
  bottom: -32%;
@@ -150,7 +144,7 @@
     position: relative;
     z-index: 1;
 }
-.btn-pink a{
+.hireme{
     text-decoration: none;
     font-size: 20px;
     color: white;
@@ -167,7 +161,7 @@
     transform: scaleX(0);
     transform-origin: left;
     z-index: -1;
-    transition: 0.5s all;
+    transition: .4s all;
 }
 .btn-pink:hover::before{
     transform: scaleX(1);
@@ -299,23 +293,26 @@
     
 }
 .project-content img{
-    width: 50px;
-    transition: all 0.8s;
-       
+    width: 30px;
+    transition: all 0.5s ease-in-out;
+    
+}
+.project-card:hover .project-content img{
+    transform: scale(1.1);
+    
 }
 .project-content{
     transition:all 0.4s ease-in-out;
     display: flex;
     gap: 1rem;
 }
-.project-card:hover .project-content img{ 
-    transform: scale(1.1);
-    /* gap: 4rem; */
+.project-heading{
+    transition: all 0.4s;
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
 }
-.project-card:hover .project-heading{
-    transform: scale(1.1);
-    margin-top: 20px;
-}
+
 #project1{
     position: relative;
 }
@@ -329,7 +326,7 @@
 .blob2 img{
     width: 30%;
     position: absolute;
-    left: -22rem;
+    left: -27rem;
     mix-blend-mode: multiply;
     
 }
@@ -372,7 +369,7 @@
     background: rgba(70, 25, 12, 0.651);
     transform: scaleX(0);
     transform-origin: left;
-    transition: 1s all;
+    transition: .5s all;
     z-index: -2;
 }
 .project-card:hover::before{
@@ -386,12 +383,11 @@
     z-index: -1;
  
 }
-.project-heading{
-    transition: all 0.4s;
-    color: white;
-    font-size: 60px;
-}
+
 .project-subHeading{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
     width: 50%;
     text-align: center;
     margin-top: 20px;
@@ -416,11 +412,12 @@ margin-top: 28px;
     
 }
 .project-card:hover .project-heading{
-    transition: 0.8s all ease-in-out;
+    transition: 0.5s all ease-in-out;
     transform: scale(1.2);
+    margin-top: 15px;
 }
 #project2{
-    margin-left: 10rem;
+    margin-left: 6rem;
     background: url(https://bairesdev.mo.cloudinary.net/blog/2023/10/Steps-of-Mobile-App-Development.jpg?tx=w_1920,q_auto);
     background-size: cover;
 }
@@ -445,7 +442,7 @@ margin-top: 28px;
     transition: all 0.5s;
     width: 100px;
     filter: grayscale(0);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .skills{
     display: flex;
@@ -513,7 +510,7 @@ margin-top: 28px;
 }
 
 .container-bhai{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -559,7 +556,7 @@ footer{
     margin-top: 12rem;
 
     height: 70px;
-    width: 100%;
+    width: 100vw;
     background: #00000038;
     display: flex;
     align-items: center;
@@ -604,3 +601,4 @@ footer{
 .icons-link{
     margin-right: 20px;
 }
+
